@@ -412,6 +412,36 @@
   auto_recover: False
   comment: Tests virtual switch vm with a DPU
 
+- conf-name: vms-kvm-vpp-t1-lag
+  group-name: vms6-2
+  topo: t1-lag
+  ptf_image_name: docker-ptf
+  ptf: ptf-02
+  ptf_ip: 10.250.0.106/24
+  ptf_ipv6: fec0::ffff:afa:6/64
+  server: server_1
+  vm_base: VM0104
+  dut:
+    - vlab-vpp-01
+  inv_name: veos_vtb
+  auto_recover: 'False'
+  comment: Tests virtual vpp switch vm
+
+- conf-name: vms-kvm-vpp-t1
+  group-name: vms6-2
+  topo: t1
+  ptf_image_name: docker-ptf
+  ptf: ptf-02
+  ptf_ip: 10.250.0.106/24
+  ptf_ipv6: fec0::ffff:afa:6/64
+  server: server_1
+  vm_base: VM0104
+  dut:
+    - vlab-vpp-01
+  inv_name: veos_vtb
+  auto_recover: 'False'
+  comment: Tests virtual vpp switch vm
+
 - conf-name: vms-kvm-t1-smartswitch-ha
   group-name: vms6-1
   topo: t1-smartswitch-ha
